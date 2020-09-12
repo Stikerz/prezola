@@ -1,0 +1,20 @@
+[
+  {
+    "name": "50's Style Stand Mixer, Black",
+    "brand": "SMEG SMALL APPLIANCES",
+    "price": 449.99,
+    "in_stock_quantity": 1
+  },
+  {
+    "name": "Polka Bedding Set, King, Silver",
+    "brand": "BEAU LIVING",
+    "price": 105.00,
+    "in_stock_quantity": 5
+  },
+  {
+    "name": "Paignton Bedding Set, King, White",
+    "brand": "BEAU LIVING",
+    "price": 105.00,
+    "in_stock_quantity": 0
+  }
+]

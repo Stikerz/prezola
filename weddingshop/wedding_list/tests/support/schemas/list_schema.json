@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Get Products Response Schema",
+  "type": "array",
+  "properties": {
+    "user": {
+      "type": "object"
+    },
+    "product": {
+      "type": "object"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "purchased": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "user",
+    "product",
+    "quantity",
+    "purchased"
+  ],
+  "additionalProperties": false
+}
