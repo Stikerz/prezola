@@ -1,0 +1,40 @@
+<div class="container">
+  <br>
+  <div id="table" class="overflow-auto">
+    <h4>{{product.name}}</h4>
+    <br>
+    <br>
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Price</th>
+        <th scope="col">in_stock_quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><a class="nav-link" href="#" routerLink="/products/{{
+        product.id }}">{{product.name}}</a></td>
+        <td>{{product.brand}}</td>
+        <td>£{{product.price}}</td>
+        <td>{{product.in_stock_quantity}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <br>
+    <form>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button (click)="add()" type="button" class="btn btn-primary">Add
+          1 to List</button>
+        <button (click)="purchase()" type="button"
+                class="btn btn-success">Purchase
+          Gift</button>
+        <button (click)="delete()" type="button"
+                class="btn btn-danger">Delete 1 from List
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
