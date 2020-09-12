@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  angular-service:
+    container_name: src_front-end
+    build: ./src
+    volumes:
+      - ./src:/src_frontend
+    ports:
+      - "4200:4200"
+    command: bash -c "npm install && ng serve --host 0.0.0.0 --port 4200"
+  django-api:
+    build:
+      context: ./weddingshop
+      dockerfile: docker/dev/python/Dockerfile
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py loaddata products && python manage.py runserver 0.0.0.0:8000"
+    container_name: weddingshop_backend
+    volumes:
+      - ./weddingshop:/weddingshop_backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
