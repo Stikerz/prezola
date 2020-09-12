@@ -1,0 +1,47 @@
+<div class="container">
+  <br>
+  <div id="weddingtable" class="overflow-auto">
+    <h4>Weddinglist</h4>
+    <br>
+    <br>
+    <h6>Purchased Gifts</h6>
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let gift of gifts">
+
+        <td *ngIf="gift.purchased > 0"><a class="nav-link" href="#"
+                                          routerLink="/products/{{
+        gift.product }}">{{gift.product_name}}</a></td>
+        <td *ngIf="gift.purchased > 0">{{gift.purchased}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <br>
+    <h6>Not Purchased Gifts</h6>
+    <br>
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let gift of gifts">
+
+        <td *ngIf="gift.quantity > 0"><a class="nav-link" href="#"
+                                  routerLink="/products/{{
+        gift.product }}">{{gift.product_name}}</a></td>
+        <td
+          *ngIf="gift.quantity > 0">{{gift.quantity}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
