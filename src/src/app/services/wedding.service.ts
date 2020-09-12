@@ -188,7 +188,7 @@ export class WeddingService {
           this.http.delete(this.baseUrl + '/weddingshop/listitem/' +  this.listDetail[0].id + '/', this.httpOptionsToken).subscribe(
       data => {
         this.toastr.success('Removed gift from List');
-        this.router.navigate(['home']);
+        this.router.navigate(['']);
 
       },
       err => {
