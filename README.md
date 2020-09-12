@@ -40,7 +40,7 @@ python --version
 
 To check we are on the right Python version
 
-- You can install the dependencies with `pip install -r requirements.txt`
+- You can install the dependencies with `pip install -r requirements/all.txt`
 
 - You can then run the migrations commands with `python manage.py
  makemigrations
