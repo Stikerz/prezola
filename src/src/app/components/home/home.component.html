@@ -1,6 +1,6 @@
 <div class="container">
   <br>
-  <div id="weddingtable" class="overflow-auto">
+  <div id="weddingtable" class="overflow-auto" #weddingtable>
     <h4>Weddinglist</h4>
     <br>
     <br>
@@ -44,4 +44,8 @@
       </tbody>
     </table>
   </div>
+  <div class="col-md-4">
+      <button class="btn btn-success btn-block" (click)="openPDF()">Export to
+        PDF</button>
+    </div>
 </div>
