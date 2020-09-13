@@ -1,0 +1,5 @@
+/weddingshop/setup.cfg
+/weddingshop/.coverage
+/weddingshop/db.sqlite3
+/weddingshop/htmlcov/*
+/env/
