@@ -72,7 +72,6 @@ To check you have it installed correctly check the version `ng v`
 - Project uses sensitive info hardcoded  in `weddingshop/settings` for
  dev purposes only ( store sensitive data are either with environment
   variables or via a json file in production)
-- Currently API is for retrieving only as instructed with task
 - Django server 'runserver' for dev purposes only, server such a gunicorn for
  prod
  - fixtures to load database with initial data (use tool such celery for prod)
