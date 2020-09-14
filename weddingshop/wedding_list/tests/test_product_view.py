@@ -46,7 +46,7 @@ class ProductViewTest(TestCase):
 
     def test_unauthorized_get_products(self):
         response = self.client.get("/weddingshop/products/")
-        self.assertEqual(response.status_code, 403)
+        self.assertEqual(response.status_code, 401)
 
     def test_create_product(self):
         user_login = self.login()
