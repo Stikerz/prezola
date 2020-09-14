@@ -94,3 +94,20 @@ To check you have it installed correctly check the version `ng v`
 
 ## Coverage 
 
+```
+
+Module	                   Statements	Missing	Excluded	Coverage
+---------------------------------------------------------------
+wedding_list/__init__.py	0	0	0	100%
+wedding_list/admin.py	        4	0	0	100%
+wedding_list/apps.py	        0	0	3	100%
+commands/addproducts.py	        15	0	0	100%
+wedding_list/models.py	        17	0	0	100%
+wedding_list/serializers.py	72	0	0	100%
+wedding_list/urls.py	        3	0	0	100%
+wedding_list/views.py	        41	0	7	100%
+weddingshop/settings.py	        20	0	0	100%
+weddingshop/urls.py	        4	0	0	100%
+---------------------------------------------------------------
+Total	                        399	0	10	100%
+```
