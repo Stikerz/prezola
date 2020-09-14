@@ -96,3 +96,55 @@ class ProductViewTest(TestCase):
         response2 = self.client.get("/weddingshop/list/")
         self.assertEqual(response2.status_code, 200)
         self.assertEqual(len(response2.data), 0)
+
+    def test_update_error_list_gift(self):
+        user_login = self.login()
+        self.assertTrue(user_login)
+        user = User.objects.get(id=1)
+        product = Product.objects.get(id=2)
+        data = {
+            "user": user,
+            "product": product,
+            "quantity": 1,
+            "purchased": 1,
+        }
+        WeddingList(**data).save()
+        update_data = {
+            "user": 1,
+            "product": 2,
+            "quantity": 1,
+            "purchased": 3,
+        }
+        response = self.client.put(
+            "/weddingshop/listitem/1/",
+            data=json.dumps(update_data),
+            content_type="application/json",
+        )
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(response.json()[0], 'Cannot purchase more than '
+                                             'whats in your list')
+
+    def test_update_list_gift(self):
+        user_login = self.login()
+        self.assertTrue(user_login)
+        user = User.objects.get(id=1)
+        product = Product.objects.get(id=2)
+        data = {
+            "user": user,
+            "product": product,
+            "quantity": 1,
+            "purchased": 1,
+        }
+        WeddingList(**data).save()
+        update_data = {
+            "user": 1,
+            "product": 2,
+            "quantity": 1,
+            "purchased": 2,
+        }
+        response = self.client.put(
+            "/weddingshop/listitem/1/",
+            data=json.dumps(update_data),
+            content_type="application/json",
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)

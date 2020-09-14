@@ -70,7 +70,7 @@ class WeddingListRUDAPIView(RetrieveUpdateDestroyAPIView):
         return queryset
 
 
-class CustomAuthToken(ObtainAuthToken):
+class CustomAuthToken(ObtainAuthToken):  # pragma: no cover
     def post(self, request, *args, **kwargs):
         serializer = self.serializer_class(
             data=request.data, context={"request": request}
