@@ -121,8 +121,9 @@ class ProductViewTest(TestCase):
             content_type="application/json",
         )
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        self.assertEqual(response.json()[0], 'Cannot purchase more than '
-                                             'whats in your list')
+        self.assertEqual(
+            response.json()[0], "Cannot purchase more than " "whats in your list"
+        )
 
     def test_update_list_gift(self):
         user_login = self.login()

@@ -48,11 +48,11 @@ class WeddingListSerializer(serializers.ModelSerializer):
         read_only=True, default=CurrentUserDefault()
     )
 
-    product_name = serializers.CharField(source='product', read_only=True)
+    product_name = serializers.CharField(source="product", read_only=True)
 
     class Meta:
         model = WeddingList
-        fields = ["id","user", "product", "quantity", "purchased", "product_name"]
+        fields = ["id", "user", "product", "quantity", "purchased", "product_name"]
 
     def get_data(self, data, product=None):
         quantity = 0

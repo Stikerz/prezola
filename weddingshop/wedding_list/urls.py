@@ -6,7 +6,7 @@ from wedding_list.views import (
     ProductAPIView,
     UserAPIView,
     UserDetailView,
-    ProductRUDAPIView
+    ProductRUDAPIView,
 )
 
 urlpatterns = [
