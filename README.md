@@ -96,7 +96,7 @@ To check you have it installed correctly check the version `ng v`
 
 ```
 
-Module	                   Statements	Missing	Excluded	Coverage
+Module	                   Statements Missing Excluded Coverage
 ---------------------------------------------------------------
 wedding_list/__init__.py	0	0	0	100%
 wedding_list/admin.py	        4	0	0	100%
